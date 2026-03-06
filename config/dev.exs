@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :connector, Connector.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "alexander.vonhohnhorst",
+  password: "",
   hostname: "localhost",
   database: "connector_dev",
   stacktrace: true,

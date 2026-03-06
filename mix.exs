@@ -65,7 +65,11 @@ defmodule Connector.MixProject do
       {:gettext, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      # AutoStack / Connector core deps
+      {:oban, "~> 2.19"},
+      {:cloak_ecto, "~> 1.3"},
+      {:ex_cldr, "~> 2.40"}
     ]
   end
 

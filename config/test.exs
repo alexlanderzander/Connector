@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :connector, Connector.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "alexander.vonhohnhorst",
+  password: "",
   hostname: "localhost",
   database: "connector_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
@@ -28,6 +28,9 @@ config :swoosh, :api_client, false
 
 # Print only warnings and errors during test
 config :logger, level: :warning
+
+# Disable Oban queues in test
+config :connector, Oban, testing: :inline
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime

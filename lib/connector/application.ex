@@ -12,8 +12,7 @@ defmodule Connector.Application do
       Connector.Repo,
       {DNSCluster, query: Application.get_env(:connector, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Connector.PubSub},
-      # Start a worker by calling: Connector.Worker.start_link(arg)
-      # {Connector.Worker, arg},
+      {Oban, Application.fetch_env!(:connector, Oban)},
       # Start to serve requests, typically the last entry
       ConnectorWeb.Endpoint
     ]

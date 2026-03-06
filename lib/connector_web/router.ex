@@ -17,7 +17,7 @@ defmodule ConnectorWeb.Router do
   scope "/", ConnectorWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", DiscoveryLive
   end
 
   # Other scopes may use custom stacks.
